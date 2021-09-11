@@ -8,8 +8,7 @@
 **Folder structure details**
 - novel_classification.py is main file running the entire project.
 - util/tool.py contains the functions like early stopping/ train epoch/ test epoch etc.
-- output folder contains the images of confusion matrix and training plot along with prediction file.
-- logs folder contains logs of the running the code.
+- output folder contains the images of confusion matrix and training plot along with prediction file. This folder also contains log file showing details while code   runs and all the results including classification report
 - checkpoints contains the model saved.
 - data contains input files and embedding file which contains glove embeddings.
 - Models folder contains LSTM model used.
@@ -56,10 +55,35 @@ Classifier_LSTM(
   (sig): Sigmoid()
 )
 
-Early stopping has been used to avoid overfit in the training process. The accuracy of the model is 69% accuracy on test set. Below is the image of confusion matrix classwise. 
+Early stopping has been used to avoid overfit in the training process. The accuracy of the model is 69% accuracy on test set. Below is the image of confusion matrix classwise and training process. 
 
 
-![alt text](https://raw.githubusercontent.com/Prateek-Havanur/Novel_classification/main/outputs/confusion%20matrix.png)
+<!-- ![alt text](https://raw.githubusercontent.com/Prateek-Havanur/Novel_classification/main/outputs/confusion%20matrix.png) -->
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Prateek-Havanur/Novel_classification/main/outputs/confusion%20matrix.png" width="350" title="hover text">
+  <img src="https://raw.githubusercontent.com/Prateek-Havanur/Novel_classification/main/outputs/Loss_plot_plain_model.png" width="350" alt="accessibility text">
+</p>
+
+**Classification report**
+
+|                    | precision    |recall  |f1-score   |support|
+|--------------------|--------------|--------|-----------|-------| 
+|      les_miserable |     0.711    | 0.746  |   0.728   |    555|
+|   huckleberry_finn |     0.866    | 0.929  |   0.896   |    326|
+|            dracula |     0.753    | 0.645  |   0.695   |    575|
+|       oliver_twist |     0.846    | 0.836  |   0.841   |    506|
+|          dubliners |     0.646    | 0.703  |   0.673   |    195|
+| tale_of_two_cities |     0.636    | 0.518  |   0.571   |    515|
+| great_expectations |     0.725    | 0.728  |   0.726   |    578|
+|          peter_pan |     0.514    | 0.449  |   0.480   |    158|
+|          moby_dick |     0.781    | 0.833  |   0.807   |    678|
+|alice_in_wonderland |     0.630    | 0.793  |   0.702   |     58|
+|        hard_timesN |     0.761    | 0.819  |   0.789   |    304|
+|         tom_sawyer |     0.507    | 0.662  |   0.575   |    160|
+|           accuracy |              |        |   0.732   |   4608|
+|          macro avg |     0.698    | 0.722  |   0.707   |   4608|
+|       weighted avg |     0.731    | 0.732  |   0.730   |   4608|
 
 **Improvements**
 - We can try to experiment the task with different models like RNN/Bidirectional RNN/LSTM, GRU etc.
