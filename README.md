@@ -47,12 +47,12 @@ I have used pretrained glove embeddings to intialiase weight of embedding layer.
 
 Below is the structure of the model
 
-Classifier_LSTM(
-  (embedding): Embedding(27, 300)
-  (lstm): LSTM(300, 256, num_layers=2, batch_first=True, dropout=0.5)
-  (dropout): Dropout(p=0.5, inplace=False)
-  (fc): Linear(in_features=256, out_features=12, bias=True)
-  (sig): Sigmoid()
+Classifier_LSTM(\
+  (embedding): Embedding(27, 300)\
+  (lstm): LSTM(300, 256, num_layers=2, batch_first=True, dropout=0.5)\
+  (dropout): Dropout(p=0.5, inplace=False)\
+  (fc): Linear(in_features=256, out_features=12, bias=True)\
+  (sig): Sigmoid()\
 )
 
 Early stopping has been used to avoid overfit in the training process. The accuracy of the model is 69% accuracy on test set. Below is the image of confusion matrix classwise and training process. 
