@@ -1,0 +1,256 @@
+srun: job 146613 queued and waiting for resources
+srun: job 146613 has been allocated resources
+pyxis: creating container filesystem ...
+pyxis: starting container ...
+
+satwamuluhqgulamlrmvezuhqvkrpmletwulcitwskuhlemvtwamuluhiwiwenuhlrvimvqvkruhulenamuluhqgqvtwvimviwuhtwamuluhulqvkrenamcitwuhvipmpmqvuhskiwkrpmdfuhlrvimvskvikrpmqvuhskmvgzenleuhqvmvamuluhulenamuluhqvletwtwvipmpmgzleenamuhtwamuluhtwletwdfuhiwkrxeleentwxeuhpmqvuhtwiwmvamdfuhpkeztwamuluhvimvuhqvtwmkpmpmlelruhgztwtwskuhtwlrkrpmlruhpmuluhqvenuhtwyplepmxeuhenuhamypkrqvuhamulmvdfuhqvskentwamletwlrlrpmiwuhtwamul	: 7...
+twmkiwpmqvtwleuhsaiwsktwmvlelekramuhqvkruhtwskenezuhskvienuhqgulvienulqvvimvuhvienuhvimvuhulyptwbrtvkrqvuhtwamuluhsktwlrvienamypuhqvmvamguuhvgoaulamlrmvvibhpmuluhqvijulmvnkuhqgskkrpmiwenuhsktwskskenuhsaiwmvleenulvikriwpmmkvimvuhiguhvgqgulleentwamuhsaezuhqvqvtwiwtvuhskvisknkuhravidfpmvitwleuhvienmvypqvpmjeuhxepmuhlekrtwulenezenuhiwenmvypvimvmkpmlegzuhsktwulenletvtwiwtwypuhtwamuluhpmul	: 3...
+vidfpmskuhvilepmuluhtwtvuhulsovienamqvuhskiwmvamypuhtwamulsouhqgvienezuhtwamuluhamulmvdfuhsaiwulvitwiwpmmvmkuhlrvimviwlrlrkrleulqvuhqgiwlemvlruhtwamuluhsktwezentwleypqvuhsoqgulenamuluhlepmxeuhtwleenypuhulsovipmskuhiguhqgiwiwmvdfuhqgulenamuluhlepmxeuhtwleenypuhulsovipmskuhigsouhulqvvimvenlrenuhskentwamuhlekrpmsauhulmviwgzqvuhiwiwsoiguhlepmuhqgtwezuhezpmlexeuhxexepmuhskvienulxysouhuhragzqvenlelruhqvsoiwlemvlruhtwamul	: 8...
+raskleenkrlruhtwulenleengztwqvuhenuhsatvuhsktwskvikrpmlelekrqvuhsktwuciwendfuhamypentwuhskvienuhqgulleengzenuhulgztwucuhtwletwdfuhpmdfuluhtwamguuhralrvimvezpmypuhtwleenuhkrpmsauhdfpmviucuhsatwamulnkuhpkulypmvmkvipmypuhsaezuhpmuluhulvientwlrletwqvuhtwamuluhskmvenqvuhvgqgskleenpmtvuhvipmuhsktwulyptwgzcitwuhtwleenuhkrpmrbnkuhraleentwuhsaezuhtwskmvqvvimvuhlrvimvamultwezpmqvuhulqvlekrtvuhpmuluhsktweztwtwqvuhulenamuluhskvikrpmqv	: 3...
+dfenqvuhtwamqvuhqgtwiwtvenuluhqvijletwamulenxeuhletwamuhleentwviuhvidfpmskuhulenqvuhtwamqvuhvitwamdfuhskvienuhpkvidfpmultwucpmeeuhqvskleendfpmuluhsktwucpmpmiwuhdfpmskvimvdfuhskuhuhralrvimvvilepmezuhsktwulvimvpmgzgzenuhtwamuluhvipmuhsktwlemvengztwleuhenqvmvkrpmxzuhpkskmviwbhvimvxexepmypuhenuhvipmgzkruhgzenleuhenuhtwucmviwuhulentwtvuhenuhamulmvdfuhskvipmyptwqvuhsaletwmktwuhsktwlekrqventwezuhamypmvamdfuhqgulmvuhvimv	: 4...
+
+0it [00:00, ?it/s]
+554it [00:00, 5536.31it/s]
+1350it [00:00, 6959.95it/s]
+2517it [00:00, 9106.45it/s]
+3668it [00:00, 10053.72it/s]
+4846it [00:00, 10674.82it/s]
+6054it [00:00, 11149.03it/s]
+7169it [00:00, 8980.80it/s] 
+8545it [00:00, 10286.12it/s]
+9869it [00:00, 11114.63it/s]
+11144it [00:01, 11581.57it/s]
+12473it [00:01, 12075.54it/s]
+13736it [00:01, 12231.48it/s]
+15060it [00:01, 12526.83it/s]
+16380it [00:01, 12723.57it/s]
+17723it [00:01, 12932.04it/s]
+19025it [00:01, 12758.30it/s]
+20308it [00:01, 10772.22it/s]
+21636it [00:01, 11429.70it/s]
+22967it [00:02, 11940.96it/s]
+23149it [00:02, 11247.50it/s]
+x_train (22759, 450)
+y_train (22759,)
+x_val (4877, 450)
+y_val (4877,)
+x_test (4877, 450)
+y_test (4877,)
+Sample input size:  torch.Size([512, 450])
+Sample input: 
+ tensor([[ 0,  0,  0,  ..., 14,  8,  7],
+        [ 0,  0,  0,  ...,  3,  1,  6],
+        [ 0,  0,  0,  ...,  3, 17, 18],
+        ...,
+        [ 0,  0,  0,  ...,  3, 26, 16],
+        [ 0,  0,  0,  ...,  5,  6, 16],
+        [ 0,  0,  0,  ...,  7, 11,  3]])
+
+Sample label size:  torch.Size([512])
+Sample label: 
+ tensor([ 4,  7,  2,  7,  6,  6,  3,  8,  7,  6, 10,  2,  5,  2,  5, 10,  8,  5,
+         6,  1,  8,  1,  7,  7,  7,  8,  8, 10,  3,  3, 10,  1, 10,  6,  3,  7,
+         6,  2,  2,  8,  5, 11, 10,  4,  3,  7,  3,  7,  1, 10, 10,  7,  2,  5,
+         7,  5, 10,  5,  4,  6,  6, 10,  3,  6,  5,  8, 10,  1,  3,  8,  1,  9,
+         2,  7,  1,  8,  4,  0,  5,  2,  1,  7,  8,  7,  6, 10,  1,  8,  7, 11,
+         8, 10,  1, 10,  1,  2,  6,  7,  4, 11,  7,  5,  4,  2,  7,  7,  9,  0,
+         9,  7, 11, 11,  7,  1,  8,  5,  8, 10,  7,  0,  1,  7,  6,  5,  2,  6,
+         8,  1,  3,  3, 10, 10,  7, 11,  7,  8,  3,  7,  1,  3,  7, 11,  3,  8,
+        10,  7,  3,  3,  8,  7,  6,  1,  4,  8,  6,  1, 10,  4,  7,  2, 11,  1,
+         7,  7,  4,  0, 10, 10,  1,  1,  2, 10,  4,  4,  6,  6,  5,  4,  2,  1,
+         3,  8,  1,  1,  6,  3,  7,  9,  7,  8,  3, 10,  9,  7,  5,  6,  2,  8,
+         7,  7,  8,  7,  5,  6,  3,  4,  4,  7,  3,  3,  3,  9,  7,  6,  7,  3,
+         4,  7,  7, 10,  4,  2,  3,  6,  8,  8, 11,  4,  2,  2,  1,  8,  1,  5,
+        11,  3,  3,  1, 11,  5,  4,  2,  1,  4, 10,  0,  8,  3,  1,  7,  2, 11,
+         8,  0, 11,  7,  3,  7,  1, 10,  5, 11,  7,  2,  3,  9,  6,  7, 10,  1,
+         3,  3,  6,  3, 10,  8,  9, 10,  3,  4,  6,  1,  5,  1, 10,  4,  5,  9,
+         8,  4, 10,  3, 11,  1,  5,  8,  7, 10,  3,  5,  5, 10,  2,  6,  6,  7,
+         8,  3,  4, 10,  1,  5,  7,  8,  1,  3,  3,  8,  6,  7, 10,  8,  7,  4,
+         6,  1, 10,  7,  7,  7,  6,  7,  7,  3,  3,  2, 10,  4,  3,  7,  6,  7,
+         7,  5,  6,  8,  1,  9, 10,  3,  7,  8,  6,  6,  6,  3,  6,  4, 10,  4,
+         5,  8,  8,  8,  4,  3,  1,  7,  2,  6, 10,  8, 10,  9,  3,  7,  1, 10,
+         3,  6,  6,  4,  3,  6,  4,  6,  6,  7,  4,  4, 10,  8,  8,  6, 10,  5,
+        10, 10,  3,  7, 10,  6,  7,  9,  3,  7,  8,  2, 11,  7,  7,  6,  4,  3,
+         1, 11,  8,  7,  8,  7,  5,  5,  1,  4,  7,  7,  3,  3,  7, 11,  8,  7,
+         3,  2,  4,  7,  3,  6,  7,  3,  2,  3,  2, 11, 10,  8,  8,  1,  1,  4,
+         7,  6,  8,  7,  2,  7, 10,  7,  7,  1,  1,  7,  5,  8,  3,  3,  7,  6,
+         5,  8,  7,  3,  7,  3,  3,  0, 10,  1,  2,  2,  4,  8,  7,  8,  7, 10,
+         3,  1,  8,  3,  4,  6,  5, 10, 10, 10,  1,  1,  3,  0,  9,  7,  3,  7,
+         5,  1,  7, 11,  7,  7,  2, 10])
+Training on GPU.
+Classifier_LSTM(
+  (embedding): Embedding(27, 300)
+  (lstm): LSTM(300, 256, num_layers=2, batch_first=True, dropout=0.5)
+  (dropout): Dropout(p=0.5, inplace=False)
+  (fc): Linear(in_features=256, out_features=12, bias=True)
+  (sig): Sigmoid()
+)
+epoch  0  train_loss  103.5421 val_loss  20.70367
+Validation loss decreased (inf --> 20.703671).  Saving model ...
+Saved the model successfully
+epoch  1  train_loss  100.03764 val_loss  20.03657
+Validation loss decreased (20.703671 --> 20.036570).  Saving model ...
+Saved the model successfully
+epoch  2  train_loss  97.8172 val_loss  19.836246
+Validation loss decreased (20.036570 --> 19.836246).  Saving model ...
+Saved the model successfully
+epoch  3  train_loss  97.208145 val_loss  19.771397
+Validation loss decreased (19.836246 --> 19.771397).  Saving model ...
+Saved the model successfully
+epoch  4  train_loss  96.80423 val_loss  19.659197
+Validation loss decreased (19.771397 --> 19.659197).  Saving model ...
+Saved the model successfully
+epoch  5  train_loss  95.82827 val_loss  19.34628
+Validation loss decreased (19.659197 --> 19.346279).  Saving model ...
+Saved the model successfully
+epoch  6  train_loss  95.791824 val_loss  19.155378
+Validation loss decreased (19.346279 --> 19.155378).  Saving model ...
+Saved the model successfully
+epoch  7  train_loss  95.058815 val_loss  19.050047
+Validation loss decreased (19.155378 --> 19.050047).  Saving model ...
+Saved the model successfully
+epoch  8  train_loss  93.482925 val_loss  18.883224
+Validation loss decreased (19.050047 --> 18.883224).  Saving model ...
+Saved the model successfully
+epoch  9  train_loss  91.3044 val_loss  18.48502
+Validation loss decreased (18.883224 --> 18.485020).  Saving model ...
+Saved the model successfully
+epoch  10  train_loss  90.81578 val_loss  18.337553
+Validation loss decreased (18.485020 --> 18.337553).  Saving model ...
+Saved the model successfully
+epoch  11  train_loss  89.225555 val_loss  18.259718
+Validation loss decreased (18.337553 --> 18.259718).  Saving model ...
+Saved the model successfully
+epoch  12  train_loss  89.349045 val_loss  18.460953
+EarlyStopping counter: 1 out of 10
+epoch  13  train_loss  87.36659 val_loss  17.671772
+Validation loss decreased (18.259718 --> 17.671772).  Saving model ...
+Saved the model successfully
+epoch  14  train_loss  85.33084 val_loss  17.111261
+Validation loss decreased (17.671772 --> 17.111261).  Saving model ...
+Saved the model successfully
+epoch  15  train_loss  80.90382 val_loss  15.313173
+Validation loss decreased (17.111261 --> 15.313173).  Saving model ...
+Saved the model successfully
+epoch  16  train_loss  73.25213 val_loss  15.240341
+Validation loss decreased (15.313173 --> 15.240341).  Saving model ...
+Saved the model successfully
+epoch  17  train_loss  72.61285 val_loss  14.171833
+Validation loss decreased (15.240341 --> 14.171833).  Saving model ...
+Saved the model successfully
+epoch  18  train_loss  68.61212 val_loss  13.737721
+Validation loss decreased (14.171833 --> 13.737721).  Saving model ...
+Saved the model successfully
+epoch  19  train_loss  66.69689 val_loss  13.137115
+Validation loss decreased (13.737721 --> 13.137115).  Saving model ...
+Saved the model successfully
+epoch  20  train_loss  63.14614 val_loss  13.277501
+EarlyStopping counter: 1 out of 10
+epoch  21  train_loss  62.42125 val_loss  12.880294
+Validation loss decreased (13.137115 --> 12.880294).  Saving model ...
+Saved the model successfully
+epoch  22  train_loss  59.51432 val_loss  11.989212
+Validation loss decreased (12.880294 --> 11.989212).  Saving model ...
+Saved the model successfully
+epoch  23  train_loss  56.31324 val_loss  11.310594
+Validation loss decreased (11.989212 --> 11.310594).  Saving model ...
+Saved the model successfully
+epoch  24  train_loss  52.06124 val_loss  11.086913
+Validation loss decreased (11.310594 --> 11.086913).  Saving model ...
+Saved the model successfully
+epoch  25  train_loss  51.23647 val_loss  11.375687
+EarlyStopping counter: 1 out of 10
+epoch  26  train_loss  48.761406 val_loss  10.447901
+Validation loss decreased (11.086913 --> 10.447901).  Saving model ...
+Saved the model successfully
+epoch  27  train_loss  46.920643 val_loss  10.290306
+Validation loss decreased (10.447901 --> 10.290306).  Saving model ...
+Saved the model successfully
+epoch  28  train_loss  44.143227 val_loss  9.513059
+Validation loss decreased (10.290306 --> 9.513059).  Saving model ...
+Saved the model successfully
+epoch  29  train_loss  43.25865 val_loss  9.556773
+EarlyStopping counter: 1 out of 10
+epoch  30  train_loss  42.279106 val_loss  10.06842
+EarlyStopping counter: 2 out of 10
+epoch  31  train_loss  39.731373 val_loss  9.238753
+Validation loss decreased (9.513059 --> 9.238753).  Saving model ...
+Saved the model successfully
+epoch  32  train_loss  38.537243 val_loss  9.035878
+Validation loss decreased (9.238753 --> 9.035878).  Saving model ...
+Saved the model successfully
+epoch  33  train_loss  35.923145 val_loss  8.97137
+Validation loss decreased (9.035878 --> 8.971370).  Saving model ...
+Saved the model successfully
+epoch  34  train_loss  34.272835 val_loss  8.7725
+Validation loss decreased (8.971370 --> 8.772500).  Saving model ...
+Saved the model successfully
+epoch  35  train_loss  34.528736 val_loss  8.350591
+Validation loss decreased (8.772500 --> 8.350591).  Saving model ...
+Saved the model successfully
+epoch  36  train_loss  30.153833 val_loss  8.2593975
+
+  0%|          | 0/26 [00:00<?, ?it/s]
+100%|██████████| 26/26 [00:00<00:00, 99499.91it/s]
+Validation loss decreased (8.350591 --> 8.259398).  Saving model ...
+Saved the model successfully
+epoch  37  train_loss  28.378014 val_loss  7.8292766
+Validation loss decreased (8.259398 --> 7.829277).  Saving model ...
+Saved the model successfully
+epoch  38  train_loss  28.160383 val_loss  7.870595
+EarlyStopping counter: 1 out of 10
+epoch  39  train_loss  26.187813 val_loss  7.941802
+EarlyStopping counter: 2 out of 10
+epoch  40  train_loss  23.735535 val_loss  7.8921986
+EarlyStopping counter: 3 out of 10
+epoch  41  train_loss  24.307108 val_loss  8.1349125
+EarlyStopping counter: 4 out of 10
+epoch  42  train_loss  21.844856 val_loss  8.080127
+EarlyStopping counter: 5 out of 10
+epoch  43  train_loss  21.518444 val_loss  7.7918577
+Validation loss decreased (7.829277 --> 7.791858).  Saving model ...
+Saved the model successfully
+epoch  44  train_loss  20.357552 val_loss  7.9846954
+EarlyStopping counter: 1 out of 10
+epoch  45  train_loss  18.180204 val_loss  8.170651
+EarlyStopping counter: 2 out of 10
+epoch  46  train_loss  17.157507 val_loss  8.252242
+EarlyStopping counter: 3 out of 10
+epoch  47  train_loss  15.918152 val_loss  8.35498
+EarlyStopping counter: 4 out of 10
+epoch  48  train_loss  15.700859 val_loss  8.719655
+EarlyStopping counter: 5 out of 10
+epoch  49  train_loss  16.384684 val_loss  7.9331703
+EarlyStopping counter: 6 out of 10
+epoch  50  train_loss  15.306896 val_loss  8.724477
+EarlyStopping counter: 7 out of 10
+epoch  51  train_loss  13.231657 val_loss  8.738516
+EarlyStopping counter: 8 out of 10
+epoch  52  train_loss  12.423463 val_loss  9.113888
+EarlyStopping counter: 9 out of 10
+epoch  53  train_loss  12.410992 val_loss  9.29857
+EarlyStopping counter: 10 out of 10
+Early stopping
+Test loss: 0.870
+Test accuracy: 0.692
+Classification Report:
+                     precision    recall  f1-score   support
+
+      les_miserable      0.711     0.746     0.728       555
+   huckleberry_finn      0.866     0.929     0.896       326
+            dracula      0.753     0.645     0.695       575
+       oliver_twist      0.846     0.836     0.841       506
+          dubliners      0.646     0.703     0.673       195
+ tale_of_two_cities      0.636     0.518     0.571       515
+ great_expectations      0.725     0.728     0.726       578
+          peter_pan      0.514     0.449     0.480       158
+          moby_dick      0.781     0.833     0.807       678
+alice_in_wonderland      0.630     0.793     0.702        58
+        hard_timesN      0.761     0.819     0.789       304
+         tom_sawyer      0.507     0.662     0.575       160
+
+           accuracy                          0.732      4608
+          macro avg      0.698     0.722     0.707      4608
+       weighted avg      0.731     0.732     0.730      4608
+
+File saved ytest.txt
