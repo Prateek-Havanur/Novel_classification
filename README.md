@@ -1,18 +1,5 @@
 # Novel classification 
 
-**Tech stack**
-- PyTorch
-- LSTM
-- Python
-
-**Folder structure details**
-- novel_classification.py is main file running the entire project.
-- util/tool.py contains the functions like early stopping/ train epoch/ test epoch etc.
-- output folder contains the images of confusion matrix and training plot along with prediction file. This folder also contains log file showing details while code   runs and all the results including classification report
-- checkpoints contains the model saved.
-- data contains input files and embedding file which contains glove embeddings.
-- Models folder contains LSTM model used.
-
 This project solves the task of training a Machine/Deep Learning model that classifies a given line as belonging to one of the following 12 novels:
 
 - 0: alice_in_wonderland
@@ -28,13 +15,28 @@ This project solves the task of training a Machine/Deep Learning model that clas
 - 10: tale_of_two_cities
 - 11: tom_sawyer.
 
+**Tech stack**
+- PyTorch
+- LSTM
+- Python
+
+**Folder structure details**
+- novel_classification.py is main file running the entire project.
+- util/tool.py contains the functions like early stopping/ train epoch/ test epoch etc.
+- output folder contains the images of confusion matrix and training plot along with prediction file. This folder also contains log file showing details while code   runs and all the results including classification report
+- checkpoints contains the model saved.
+- data contains input files and embedding file which contains glove embeddings.
+- Models folder contains LSTM model used.
+
+
+
 **Data provided:**
 
 Input data contains the obsfuscated text which will avoid some of the traditional tasks like removing stop word, lemmatization, etc
 
 **Approaches tried:**
 
-Since the the data provided was in obfuscated format i thought transformers wouldnt be the best choice since they contain preatrained tokenizer which are by default subword tokenizers and character level tokenizers are needed for the given dataset. In order to confirm my assumption i tried the XLNet and got accuracy of 36%.   LSTM was the approach finalised and explained below.
+Since the the data provided was in obfuscated format transformers wouldnt be the best choice since they contain preatrained tokenizer which are by default subword tokenizers and character level tokenizers are needed for the given dataset. In order to confirm the assumption XLNet was trained and tested to get accuracy of 36%.  LSTM was the approach finalised and explained below.
 
 |              | LSTM  | XLNet Transformers |
 |--------------|--------------|--------------|
@@ -58,7 +60,6 @@ Classifier_LSTM(\
 Early stopping has been used to avoid overfit in the training process. The accuracy of the model is 69% accuracy on test set. Below is the image of confusion matrix classwise and training process. 
 
 
-<!-- ![alt text](https://raw.githubusercontent.com/Prateek-Havanur/Novel_classification/main/outputs/confusion%20matrix.png) -->
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Prateek-Havanur/Novel_classification/main/outputs/confusion%20matrix.png" width="350" title="hover text">
