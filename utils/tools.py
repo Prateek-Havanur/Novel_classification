@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
 import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 class EarlyStopping:
     """Early stops the training if validation loss doesn't improve after a given patience."""
@@ -84,6 +86,54 @@ def val_epoch(model, valid_loader, criterion,batch_size,train_on_gpu):
     return epoch_loss
 
 
+def evaluation(model,batch_size,test_loader,train_on_gpu,criterion):
+    # Get test data loss and accuracy
+    all_labels = []
+    all_predictions = []
+    test_losses = []  # track loss
+    num_correct = 0
+
+    # init hidden state
+    h = model.init_hidden(batch_size)
+
+    model.eval()
+    # iterate over test data
+    for inputs, labels in test_loader:
+
+        h = tuple([each.data for each in h])
+
+        if(train_on_gpu):
+            inputs, labels = inputs.cuda(), labels.cuda()
+
+        # get predicted outputs
+        output, h = model(inputs, h)
+
+        # convert probablities to integer
+        test_loss = criterion(output.squeeze(), labels.long())
+
+        test_losses.append(test_loss.item())
+
+        # convert output probabilities to predicted class (0 or 1)
+        # rounds to the nearest integer
+        pred = torch.argmax(output.squeeze(), dim=1)
+        all_predictions.extend(pred.cpu().detach().numpy())
+        all_labels.extend(labels.long().cpu().detach().numpy())
+
+        # compare predictions to true label
+        correct_tensor = pred.eq(labels.float().view_as(pred))
+        correct = np.squeeze(correct_tensor.numpy()) if not train_on_gpu else np.squeeze(
+            correct_tensor.cpu().numpy())
+        num_correct += np.sum(correct)
+
+
+    print("Test loss: {:.3f}".format(np.mean(test_losses)))
+
+
+    test_acc = num_correct/len(test_loader.dataset)
+    print("Test accuracy: {:.3f}".format(test_acc))
+
+    return all_predictions,all_labels
+
 all_final_predictions = []
 
 def prediction(model,batch_size,train_on_gpu,final_test_loader):
@@ -151,3 +201,42 @@ def sent2vec(s,embeddings_index):
     if type(v) != np.ndarray:
         return np.zeros(450)
     return v / np.sqrt((v ** 2).sum())
+
+def loss_plot(total_train_loss,total_val_loss):
+        # Plot to show the training process containing train and valid losses along with early stopping mark.
+    fig = plt.figure(figsize=(25, 25))
+    plt.plot(range(1, len(total_train_loss)+1),
+             total_train_loss, label='Training Loss')
+    plt.plot(range(1, len(total_val_loss)+1),
+             total_val_loss, label='Validation Loss')
+
+    minposs = total_val_loss.index(min(total_val_loss))+1
+    plt.axvline(minposs, linestyle='--', color='r',
+                label='Early Stopping Checkpoint')
+
+    plt.xlabel('epochs')
+    plt.ylabel('loss')
+    plt.ylim(0, 300)
+    plt.xlim(0, len(total_train_loss)+1)
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+
+    fig.savefig(
+        '../outputs/Loss_plot_plain_model.png')
+
+def confusion_matrix_plot(all_labels,all_predictions):
+    # Plot provides confusion matrix for each of the classes.
+    fig = plt.figure(figsize=(30, 30))
+    cm = confusion_matrix(all_labels, all_predictions,
+                          labels=list(set(all_labels)))
+    cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+    ax = plt.subplot()
+    sns.heatmap(cm, annot=True, ax=ax, cmap='Blues', fmt="f")
+    ax.set_title('Confusion Matrix')
+    ax.set_xlabel('Predicted Labels')
+    ax.set_ylabel('True Labels')
+    ax.xaxis.set_ticklabels(list(set(all_labels)))
+    ax.yaxis.set_ticklabels(list(set(all_labels)))
+    fig.savefig(
+        'outputs/confusion matrix')
