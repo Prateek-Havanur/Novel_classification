@@ -34,6 +34,12 @@ This project solves the task of training a Machine/Deep Learning model that clas
 
 Input data contains the obsfuscated text which will avoid some of the traditional tasks like removing stop word, lemmatization, etc
 
+**How to run**
+- Clone the repository
+- pip install -r /path/to/requirements.txt
+- Place the input data in data folder and emeddings in pretrained_emeddings folder
+- Execute python novel_classfication.py in terminal.
+
 **Approaches tried:**
 
 Since the the data provided was in obfuscated format transformers wouldnt be the best choice since they contain preatrained tokenizer which are by default subword tokenizers and character level tokenizers are needed for the given dataset. In order to confirm the assumption XLNet was trained and tested to get accuracy of 36%.  LSTM was the approach finalised and explained below.
