@@ -184,7 +184,7 @@ for i in range(epochs):
 model.load_state_dict(torch.load(
     'checkpoints/model.pt'))
 
-
+# saves the training prcoess plot along with early stopping point in the output folder
 loss_plot(total_train_loss,total_val_loss)
 
 
