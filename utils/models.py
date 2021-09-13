@@ -16,7 +16,7 @@ def create_emb_layer(weights_matrix, non_trainable=False):
 
 class Classifier_LSTM(nn.Module):
     """
-    The RNN model that will be used to perform Sentiment analysis.
+    The LSTM model that will be used to perform Sentiment analysis.
     """
 
     def __init__(self, vocab_size, output_size, embedding_dim, hidden_dim, n_layers,embedding_matrix,train_on_gpu, drop_prob=0.5,):
