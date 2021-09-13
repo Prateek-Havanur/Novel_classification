@@ -87,7 +87,7 @@ def val_epoch(model, valid_loader, criterion,batch_size,train_on_gpu):
 
 
 def evaluation(model,batch_size,test_loader,train_on_gpu,criterion):
-    # Get test data loss and accuracy
+    """ Get test data loss and accuracy """
     all_labels = []
     all_predictions = []
     test_losses = []  # track loss
@@ -203,7 +203,7 @@ def sent2vec(s,embeddings_index):
     return v / np.sqrt((v ** 2).sum())
 
 def loss_plot(total_train_loss,total_val_loss):
-        # Plot to show the training process containing train and valid losses along with early stopping mark.
+     """ Plot to show the training process containing train and valid losses along with early stopping mark."""
     fig = plt.figure(figsize=(25, 25))
     plt.plot(range(1, len(total_train_loss)+1),
              total_train_loss, label='Training Loss')
@@ -226,7 +226,7 @@ def loss_plot(total_train_loss,total_val_loss):
         '../outputs/Loss_plot_plain_model.png')
 
 def confusion_matrix_plot(all_labels,all_predictions):
-    # Plot provides confusion matrix for each of the classes.
+    """ Plot provides confusion matrix for each of the classes."""
     fig = plt.figure(figsize=(30, 30))
     cm = confusion_matrix(all_labels, all_predictions,
                           labels=list(set(all_labels)))
