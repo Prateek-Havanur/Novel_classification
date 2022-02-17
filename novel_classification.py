@@ -13,7 +13,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-#loading the data from the files
+#lo
+#fsdfsdfsdfsdfs
 folder = "data/"
 
 xtest, xtrain, ytrain = [], [], []
